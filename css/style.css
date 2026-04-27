@@ -11,6 +11,7 @@ html {
 body {
   font-family: sans-serif;
   line-height: 1.6;
+  letter-spacing: 0.05em;
   color: #222;
 }
 
@@ -187,12 +188,18 @@ section {
   background: #fff;
   border-radius: 8px;
   overflow: hidden;
-  transition: 0.3s;
   cursor: pointer;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s, transform 0.8s;
 }
 
 .works__item:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+}
+
+.works__item:active {
+  transform: translateY(-3px);
 }
 
 .works__img {
@@ -219,6 +226,18 @@ section {
   font-size: 14px;
 }
 
+/* Fade Animation */
+.js-fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+.js-fade.is-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Skills */
 .skills {
   background: #fff;
@@ -226,7 +245,8 @@ section {
 
 .skills__list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 200px);
+  justify-content: center;
   gap: 20px;
 }
 
@@ -235,6 +255,13 @@ section {
   padding: 16px;
   text-align: center;
   font-weight: bold;
+}
+
+.skills__sub {
+  display: block;
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
 }
 
 /* About */
@@ -268,24 +295,30 @@ section {
 
 /* Contact */
 .contact {
-  text-align: center;
-  background: #fff;
-}
-
-.contact__text {
-  margin-bottom: 12px;
-}
-
-.contact__item a {
-  display: inline-block;
-  border: 1px solid #222;
-  padding: 10px 20px;
-  transition: 0.3s;
-}
-
-.contact__item a:hover {
-  background: #222;
+  background: #444;
   color: #fff;
+  text-align: center;
+  padding: 120px 0;
+}
+
+.contact__title {
+  font-size: 36px;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.contact__subtitle {
+  font-size: 14px;
+  margin-bottom: 30px;
+  opacity: 0.8;
+}
+
+.contact__thanks {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 2;
+  opacity: 0.9;
 }
 
 /* Fixed Buttons */
@@ -449,7 +482,7 @@ section {
   }
 
   .skills__list {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 200px);
   }
 
   .about__inner {
@@ -457,8 +490,26 @@ section {
     text-align: center;
   }
 
+  .contact {
+    padding: 80px 0;
+  }
+
+  .contact__title {
+    font-size: 28px;
+  }
+
+  .contact__thanks {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
   .work-modal {
     padding: 50px 15px 20px;
   }
 }
 
+@media (max-width: 480px) {
+  .skills__list {
+    grid-template-columns: 1fr;
+  }
+}

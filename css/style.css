@@ -189,13 +189,29 @@ section {
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
-  opacity: 1;
+
   transform: translateY(0);
-  transition: opacity 0.8s, transform 0.8s;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease;
 }
 
-.works__item:hover {
-  transform: translateY(-8px);
+.js-fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.js-fade.is-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.works__item.js-fade.is-show:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  filter: brightness(1.03);
 }
 
 .works__item:active {
@@ -226,17 +242,7 @@ section {
   font-size: 14px;
 }
 
-/* Fade Animation */
-.js-fade {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s, transform 0.8s;
-}
 
-.js-fade.is-show {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 /* Skills */
 .skills {

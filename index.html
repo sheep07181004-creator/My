@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header__inner">
+      <h1 class="header__logo">
+        <a href="#">My Portfolio</a>
+      </h1>
+
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__item"><a href="#works">Works</a></li>
+          <li class="header__item"><a href="#skills">Skills</a></li>
+          <li class="header__item"><a href="#about">About</a></li>
+          <li class="header__item"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" type="button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="overlay"></div>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <h2 class="hero__title">伝わるデザインを、丁寧なコーディングで。</h2>
+        <p class="hero__text">
+          HTML/CSS・JavaScriptを使い、Figmaデザインをもとに
+          見やすく使いやすいWebサイトを丁寧に制作します。
+        </p>
+      </div>
+    </section>
+
+    <!-- Works -->
+    <section class="works" id="works">
+      <div class="container">
+        <h2 class="section-title">Works</h2>
+
+        <div class="works__list">
+          <article class="works__item js-work" data-url="https://sheep07181004-creator.github.io/Assignment">
+            <div class="works__img">
+              <img src="img/works02.jpg" alt="家のサイト">
+            </div>
+            <div class="works__body">
+              <h3 class="works__title">家のサイト</h3>
+              <p class="works__text">
+                スクール課題として制作し、実務を意識したコーディングを行いました。
+              </p>
+            </div>
+          </article>
+
+          <article class="works__item js-work" data-url="https://sheep07181004-creator.github.io/Travel-Blog/">
+            <div class="works__img">
+              <img src="img/works03.jpg" alt="ブログサイト">
+            </div>
+            <div class="works__body">
+              <h3 class="works__title">ブログサイト</h3>
+              <p class="works__text">
+                ブログ形式のレイアウトを意識し、記事一覧のUIを実装したサイトです。
+              </p>
+            </div>
+          </article>
+
+          <article class="works__item js-work" data-url="https://sheep07181004-creator.github.io/profile/">
+            <div class="works__img">
+              <img src="img/works04.jpg" alt="自転車サイト">
+            </div>
+            <div class="works__body">
+              <h3 class="works__title">自転車サイト</h3>
+              <p class="works__text">
+                シンプルなレイアウトで制作し、ビジュアルを活かしたデザインを意識したサイトです。
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills" id="skills">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+
+        <ul class="skills__list">
+          <li class="skills__item">HTML</li>
+          <li class="skills__item">CSS</li>
+          <li class="skills__item">JavaScript</li>
+          <li class="skills__item">Responsive</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+      <div class="container">
+        <p class="section-subtitle">私について</p>
+        <h2 class="section-title">About</h2>
+
+        <div class="about__inner">
+          <div class="about__profile">
+            <img src="img/icon.png" alt="プロフィール画像" class="about__icon">
+          </div>
+
+          <p class="about__text">
+            はじめまして。Web制作を行っております。<br>
+            HTML/CSS・JavaScriptを用いたコーディングを中心に、
+            FigmaデザインをもとにしたWebサイト制作を行っています。<br>
+            見やすく使いやすいデザインを意識し、
+            丁寧な実装を心がけています。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <p class="contact__text">お問い合わせは下記よりお願いいたします。</p>
+
+        <ul class="contact__list">
+          <li class="contact__item">
+            <a href="mailto:sheep07181004@gmail.com">お問い合わせはこちら</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal -->
+  <div class="work-modal">
+    <div class="work-modal__content">
+      <button class="work-modal__close" type="button"></button>
+      <iframe class="work-modal__frame" src="" title="制作物"></iframe>
+    </div>
+  </div>
+
+  <!-- Fixed Buttons -->
+  <a href="#" class="to-top">▲</a>
+  <a href="#contact" class="fixed-contact">Contact</a>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Name</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
+

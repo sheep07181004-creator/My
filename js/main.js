@@ -63,17 +63,6 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-const toTop = document.querySelector('.to-top');
-
-toTop.addEventListener('click', (e) => {
-  e.preventDefault();
-
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-});
-
 const fadeItems = document.querySelectorAll('.js-fade');
 
 const fadeObserver = new IntersectionObserver((entries) => {

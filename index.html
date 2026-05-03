@@ -41,7 +41,7 @@
     <!-- Hero -->
     <section class="hero">
       <div class="container">
-        <h2 class="hero__title">伝わるデザインを、丁寧なコーディングで。</h2>
+        <h2 class="hero__title">伝わるデザインで、丁寧なコーディングを。</h2>
         <p class="hero__text">
           HTML/CSS・JavaScriptを使い、Figmaデザインをもとに
           見やすく使いやすいWebサイトを丁寧に制作します。
@@ -101,20 +101,49 @@
 
         <ul class="skills__list">
           <li class="skills__item">
-            HTML / CSS
-            <span class="skills__sub">レスポンシブ対応可</span>
+            <img src="img/html.png" alt="HTML" class="skills__icon">
+            <h3 class="skills__title">HTML</h3>
+            <span class="skills__sub">
+              構造を意識し、SEOも考慮したコーディングを行います。
+            </span>
           </li>
 
           <li class="skills__item">
-            JavaScript
-            <span class="skills__sub">基本的な実装</span>
+            <img src="img/css.png" alt="CSS" class="skills__icon">
+            <h3 class="skills__title">CSS</h3>
+            <span class="skills__sub">
+              レスポンシブ対応を意識し、どのデバイスでも見やすく整ったデザインを実装します。
+            </span>
           </li>
 
           <li class="skills__item">
-            Responsive
-            <span class="skills__sub">スマホ対応</span>
+            <img src="img/js.png" alt="JavaScript" class="skills__icon">
+            <h3 class="skills__title">JavaScript</h3>
+            <span class="skills__sub">
+              基本的な動きのあるUIを実装し、使いやすいサイト制作を心がけています。
+            </span>
+          </li>
+
+          <li class="skills__item">
+            <img src="img/responsive.png" alt="Responsive" class="skills__icon">
+            <h3 class="skills__title">Responsive</h3>
+            <span class="skills__sub">
+              スマートフォンにも対応したサイト制作が可能です。
+            </span>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <!-- Flow（画像） -->
+    <section class="flow">
+      <div class="container">
+        <h2 class="section-title">Flow</h2>
+
+        <div class="flow__img">
+          <img src="img/~~~.png" alt="制作の流れ">
+        </div>
+
       </div>
     </section>
 
@@ -130,7 +159,7 @@
           </div>
 
           <p class="about__text">
-            はじめまして。Web制作を行っております。<br>
+            はじめまして。Kobayashiです。Web制作を行っております。<br>
             HTML/CSS・JavaScriptを用いたコーディングを中心に、
             FigmaデザインをもとにしたWebサイト制作を行っています。<br>
             見やすく使いやすいデザインを意識し、
@@ -153,6 +182,34 @@
           内容を確認後、2日以内にご返信いたします。
         </p>
 
+        <form action="https://formspree.io/f/xaqvewra" method="POST" class="contact__form">
+
+          <div class="contact__field">
+            <input type="text" name="name" placeholder="お名前" required>
+          </div>
+
+          <div class="contact__field">
+            <input type="email" name="email" placeholder="メールアドレス" required>
+          </div>
+
+          <div class="contact__field">
+            <select name="category" required>
+              <option value="">お問い合わせ項目を選択</option>
+              <option value="制作のご相談">制作のご相談</option>
+              <option value="お見積もり依頼">お見積もり依頼</option>
+              <option value="ご質問">ご質問</option>
+              <option value="その他">その他</option>
+            </select>
+          </div>
+
+          <div class="contact__field">
+            <textarea name="message" placeholder="お問い合わせ内容" required></textarea>
+          </div>
+
+          <button type="submit" class="contact__submit">送信する</button>
+
+        </form>
+
       </div>
     </section>
 
@@ -166,13 +223,12 @@
     </div>
   </div>
 
-  <!-- Fixed Buttons -->
-  <a href="#" class="to-top">▲</a>
+  <!-- Fixed Button -->
   <a href="#contact" class="fixed-contact">Contact</a>
 
   <footer class="footer">
     <div class="container">
-      <p>© 2026 ーーー</p>
+      <p>© 2026 Kobayashi</p>
     </div>
   </footer>
 

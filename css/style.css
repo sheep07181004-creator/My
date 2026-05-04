@@ -11,7 +11,7 @@ html {
 body {
   font-family: sans-serif;
   line-height: 1.6;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
   color: #222;
 }
 
@@ -194,6 +194,14 @@ section {
   text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
 }
 
+.hero__title {
+  margin-bottom: 20px;
+}
+
+.sp-br {
+  display: none;
+}
+
 /* Works */
 .works {
   background: #f7f7f7;
@@ -274,7 +282,7 @@ section {
 }
 
 .skills__item {
-  width: 220px;
+  flex: 1;
   background: #f7f7f7;
   padding: 16px;
   text-align: center;
@@ -300,6 +308,35 @@ section {
   margin-top: 5px;
   line-height: 1.7;
   font-weight: normal;
+}
+
+/* Flow */
+.flow {
+  background: #f7f7f7;
+  padding: 80px 0;
+}
+
+.flow__img {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.flow__img img {
+  width: 100%;
+  height: auto;
+}
+
+.flow-img {
+  cursor: pointer;
+  max-width: 100%;
+}
+
+.flow-note {
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+  margin-top: 12px;
 }
 
 /* About */
@@ -403,7 +440,7 @@ section {
   position: fixed;
   right: 20px;
   bottom: 20px;
-  background: #000;
+  background: #4da3ff;
   color: #fff;
   padding: 12px 20px;
   border-radius: 30px;
@@ -495,25 +532,75 @@ section {
   color: #fff;
 }
 
-.flow {
-  background: #f7f7f7;
-  padding: 80px 0;
-}
-
-.flow__img {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.flow__img img {
+/* Image Modal */
+.img-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.img-modal.is-show {
+  display: flex;
+}
+
+.img-modal__content {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.img-modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  color: #222;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.img-modal__close::before,
+.img-modal__close::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 2px;
+  background: currentColor;
+  top: 19px;
+  left: 11px;
+}
+
+.img-modal__close::before {
+  transform: rotate(45deg);
+}
+
+.img-modal__close::after {
+  transform: rotate(-45deg);
+}
+
+.img-modal__close:hover {
+  background: #222;
+  color: #fff;
 }
 
 /* SP */
 @media (max-width: 768px) {
   section {
     padding: 60px 0;
+  }
+
+  .sp-br {
+    display: block;
   }
 
   .hamburger {
@@ -551,7 +638,11 @@ section {
   }
 
   .hero__title {
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 30px;
+    line-height: 1.5;
   }
 
   .works__list {

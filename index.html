@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+  <title>Kobayashi Portfolio</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -41,7 +41,9 @@
     <!-- Hero -->
     <section class="hero">
       <div class="container">
-        <h2 class="hero__title">伝わるデザインで、丁寧なコーディングを。</h2>
+        <h2 class="hero__title">
+          伝わるデザインで、<br class="sp-br">丁寧なコーディングを。
+        </h2>
         <p class="hero__text">
           HTML/CSS・JavaScriptを使い、Figmaデザインをもとに
           見やすく使いやすいWebサイトを丁寧に制作します。
@@ -135,15 +137,16 @@
       </div>
     </section>
 
-    <!-- Flow（画像） -->
-    <section class="flow">
+    <!-- Flow -->
+    <section class="flow" id="flow">
       <div class="container">
         <h2 class="section-title">Flow</h2>
 
         <div class="flow__img">
-          <img src="img/flow.png" alt="制作の流れ">
+          <img src="img/flow.png" alt="制作の流れ" class="flow-img">
         </div>
 
+        <p class="flow-note">※タップで拡大できます</p>
       </div>
     </section>
 
@@ -155,7 +158,7 @@
 
         <div class="about__inner">
           <div class="about__profile">
-            <img src="img/icon.png" alt="プロフィール画像" class="about__icon">
+            <img src="img/icon.png" alt="プロフィール画像" class="about__icon" width="120" height="120">
           </div>
 
           <p class="about__text">
@@ -221,6 +224,11 @@
       <button class="work-modal__close" type="button"></button>
       <iframe class="work-modal__frame" src="" title="制作物"></iframe>
     </div>
+  </div>
+
+  <div class="img-modal">
+    <button class="img-modal__close" type="button"></button>
+    <img src="" alt="" class="img-modal__content">
   </div>
 
   <!-- Fixed Button -->
